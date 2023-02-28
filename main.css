@@ -3,16 +3,13 @@
     margin: 0;
   }
  
-/* apply global styles */
-  html,
+/* apply global styles */  
   body {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     padding: 0;
-  }
-  
-  body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
   }
 
 /* nav styles */
@@ -30,7 +27,33 @@ nav > div img {
     height: 30px;
 }
 
+.columns {
+    flex: 1;
+}
+
+#menu {
+    cursor: pointer;
+}
+
+#title {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+#logo {
+    text-align: right;
+    margin-right: 0.5em;
+}
+
+/* toggle menu */
 nav {
+    position: relative;
+}
+
+aside {
     position: relative;
 }
 
@@ -39,16 +62,17 @@ nav {
     display: none;
     color: white;
     background-color: rgb(88, 88, 248);
-    width: 8em;
-    height: ;
+    width: 7em;
+    height: 100vh;
     position: absolute;
     top: 30px;
     padding: 0;
     font-size: 1.5em;
+    font-weight: lighter;
 }
 
-.toggle-menu li {
-    margin: 0;
+.toggle-menu li:first-child {
+    margin-top: 30px;
 }
 
 .toggle-menu a {
@@ -62,42 +86,26 @@ nav {
     font-weight: bold;
 }
 
-.columns {
-    flex: 1;
-}
-
-#title {
-    color: white;
-    font-size: 1.1em;
-    text-align: center;
-    padding: 5px;
-}
-
-#logo {
-    text-align: right;
-    margin-right: 0.5em;
-}
-
 /* article styles */
-main > div:first-child {
-    position: relative;
-}
 
 main img {
     width: 100%;
     height: 20em;
-    padding-top: 30px;
+    padding-top: 40px;
 }
 
-main span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 3em;
-    font-weight: ;
+main > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     text-align: center;
+    justify-content: center;
+}
+
+.text {
+    position: absolute;
+    color: white;
+    font-size: 3.2em;
 }
 
 article {
@@ -111,8 +119,10 @@ hr {
 }
 
 section > h1 {
-    margin: 0 0.9em 0.1em 0.9em;
-    font-size: 2em;
+    padding: 0.01em 0.1em 0.01em 0.3em; 
+    font-size: 3.2em;   
+    text-align: justify;
+    white-space: nowrap;
 }
 
 article > h2 {
@@ -120,10 +130,12 @@ article > h2 {
     text-decoration: underline;
     margin-bottom: 10px;
     font-weight: lighter;
+    font-size: 1.7em;
 }
 
 article > div {
     margin-bottom: 15px;
+    font-size: 1.2em;
 }
 
 article h3 {
@@ -135,9 +147,9 @@ article h3 {
 
     main {
         max-width: 1200px;
-        margin-left: 10em;
-        margin-right: 10em;
-        padding-bottom: 40px;
+        width: 60vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
     }
     
     article {
@@ -146,7 +158,7 @@ article h3 {
 }
 
 @media only screen and (max-width:800px) {
-    html, body {
-        font-size: ;
+    body {
+        font-size: 14px;
     }
 }

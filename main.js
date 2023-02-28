@@ -4,4 +4,7 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         $('.toggle-menu').toggle();
     });
+    $("h1").width($(".container").width());
 });
+
+  
